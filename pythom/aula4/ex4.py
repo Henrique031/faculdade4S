@@ -82,18 +82,100 @@ else:
     rai1 = (-b+match.sqrt(delta))/(2*a)
 """
 
-cpf = "52998224725"
-#verificacao = int(cpf[0] * 10 + cpf[1] * 9 + cpf[2] * 8 + cpf[3] * 7 + cpf[4] * 6 + cpf[5] * 5 + cpf[6] * 4 + cpf[7] * 3 + cpf[8] * 2)
-c1 = int(5 * 10)
-c2 = cpf[1] * 9
-c3 = cpf[2] * 8
-c4 = cpf[3] * 7
-c5 = cpf[4] * 6
-c6 = cpf[5] * 5
-c7 = cpf[6] * 4
-c8 = cpf[7] * 3
-c9 = cpf[8] * 2
+#Meu
+cpf = str(input("Informe seu cpf para a validação: "))
+# cpf = "51247727866"
+# cpf = "52998224725"
 
-print(cpf[0])
-""" result = 5 * 10 + 2 * 9 + 9 * 8 + 9 * 7 + 8 * 6 + 2 * 5 + 2 * 4 + 4 * 3 + 7 * 2
-print(result) """
+if len(cpf) < 11 or len(cpf) > 11:
+    print("CPF INVÁLIDO! DIGITE NOVAMENTE ")
+    exit()
+
+num1 = int(cpf[0])
+num2 = int(cpf[1])
+num3 = int(cpf[2])
+num4 = int(cpf[3])
+num5 = int(cpf[4])
+num6 = int(cpf[5])
+num7 = int(cpf[6])
+num8 = int(cpf[7])
+num9 = int(cpf[8])
+num10 = int(cpf[9])
+num11 = int(cpf[10])
+
+calculo1 = num1*10 + num2*9 + num3*8 + num4*7 + num5*6 + num6*5 + num7*4 + num8*3 + num9*2
+primeiroDigitoVerificador = (calculo1 * 10) % 11
+if primeiroDigitoVerificador == 10:
+    primeiroDigitoVerificador = 0
+
+print("Primeiro digito vericador: ", primeiroDigitoVerificador)
+
+calculo2 = num1*11 + num2*10 + num3*9 + num4*8 + num5*7 + num6*6 + num7*5 + num8*4 + num9*3 + primeiroDigitoVerificador*2
+segundoDigitoVerificador = (calculo2 * 10) % 11
+if segundoDigitoVerificador == 10:
+    segundoDigitoVerificador = 0
+
+print("Segundo Numero Verificador: ", segundoDigitoVerificador)
+
+if primeiroDigitoVerificador == num10 and segundoDigitoVerificador == num11:
+    print("Válidação feita com sucesso! ")
+
+""" lucas
+if __name__ == '__main__':
+    print('Informe o CPF')
+    cpf = input()
+
+    cpf = cpf.replace('.', '').replace('-', '')
+
+    if len(cpf) < 11:
+        print(f'CPF inválido. Documento deve conter 11 digitos')
+        exit()
+
+    # conversão sem tratamento de erro intencional.
+    int(cpf)
+
+    num1 = int(cpf[0])
+    num2 = int(cpf[1])
+    num3 = int(cpf[2])
+    num4 = int(cpf[3])
+    num5 = int(cpf[4])
+    num6 = int(cpf[5])
+    num7 = int(cpf[6])
+    num8 = int(cpf[7])
+    num9 = int(cpf[8])
+    num10 = int(cpf[9])
+    num11 = int(cpf[10])
+
+    if num1 == num2 == num3 == num4 == num5 == num6 == num7 == num8 == num9 == num10 == num11:
+        print('CPF inválido')
+        exit()
+
+    primeira_soma = num1 * 10 + num2 * 9 + num3 * 8 + num4 * \
+        7 + num5 * 6 + num6 * 5 + num7 * 4 + num8 * 3 + num9 * 2
+
+    primeiro_digito_verificador = (primeira_soma * 10) % 11
+
+    if primeiro_digito_verificador == 10:
+        primeiro_digito_verificador = 0
+
+    print(primeiro_digito_verificador)
+
+    # print(primeira_soma)
+    # print(primeiro_digito_verificador)
+
+    segunda_soma = num1 * 11 + num2 * 10 + num3 * 9 + num4 * 8 + num5 * 7 + \
+        num6 * 6 + num7 * 5 + num8 * 4 + num9 * 3 + primeiro_digito_verificador * 2
+    segundo_digito_verificador = (segunda_soma * 10) % 11
+
+    if segundo_digito_verificador == 10:
+        segundo_digito_verificador = 0
+
+    print(segundo_digito_verificador)
+
+    # print(segunda_soma)
+    # print(segundo_digito_verificador)
+
+    if (primeiro_digito_verificador == num10 and segundo_digito_verificador == num11):
+        print('CPF é válido.')
+    print('Validação concluída.')
+     """

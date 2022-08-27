@@ -10,17 +10,19 @@ public class Calculadora {
         String operacao;
         Boolean erro = false;
 
-        //Instanciar classes
-        Scanner entDados = new Scanner(System.in);
+        try (//Instanciar classes
+        Scanner entDados = new Scanner(System.in)) {
+            //Entradas de dados
+            System.out.println("Digite o valor 1: ");
+            nota1 = entDados.nextFloat();
+            System.out.println("Digite o valor 2: ");
+            nota2 = entDados.nextFloat();
 
-        //Entradas de dados
-        System.out.println("Digite o valor 1: ");
-        nota1 = entDados.nextFloat();
-        System.out.println("Digite o valor 2: ");
-        nota2 = entDados.nextFloat();
+            System.out.println("Digite a operação  a ser calculada\n [ Somar | Subtrair | Dividir | Multiplicar ]"); 
+            operacao = entDados.next().toUpperCase();
+        }
 
-        System.out.println("Digite a operação  a ser calculada\n [ Somar | Subtrair | Dividir | Multiplicar ]"); 
-        operacao = entDados.next().toUpperCase();
+        
 
        /* //Saída
         if (operacao.equals("SOMAR") || operacao.equals("+")){
