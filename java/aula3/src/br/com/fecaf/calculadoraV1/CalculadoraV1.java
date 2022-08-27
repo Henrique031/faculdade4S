@@ -6,7 +6,6 @@ public class CalculadoraV1 {
     public static void main (String[] args) {
         //Declaração de variáveis
         float n1, n2;
-        boolean erro = false;
         double result = 0;
         String operacao;
 
@@ -34,7 +33,6 @@ public class CalculadoraV1 {
        result = n1 / n2;
        else {
         System.out.println("ERRO, [caracteres invalidos] ");
-        erro = true;
        }
        System.out.println(result);
 
