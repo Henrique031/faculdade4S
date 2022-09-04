@@ -14,7 +14,6 @@ Elabore um programa que leia o código de cada voto, calcule e escreva:
 * total e o % de votos em branco;
 Como finalizador da votação, tem-se qualquer valor diferente de "s".
 """
-from distutils.util import copydir_run_2to3
 
 
 print("Escolha um número do seu voto na tabela abaixo")
@@ -24,6 +23,7 @@ cod2 = 0
 cod3 = 0
 cod4 = 0
 cod5 = 0
+
 
 finalizador = "S"
 while finalizador == "S":
@@ -45,16 +45,18 @@ while finalizador == "S":
         i = i + 1
     finalizador = str(input("Digite S para continuar votando: ")).upper()
 
-totalVotos = cod1 + cod2 + cod3 + cod4 + cod5
-percent = totalVotos / 100
+totalVotos = (cod1 + cod2 + cod3 + cod4 + cod5)
+
+
+
 
 print("       Resultado final das Eleições 2022 1° Turno       ")
 print("   |Candidatos                |  Votos  |   Percentagem   |")
-print("1° |Eymael                    |   ",cod1,"   |      %",percent*cod1, "     |")
-print("2° |Levy Fidelix              |   ",cod2,"   |      %",percent*cod2, "     |")
-print("3° |Cabo Daciolo              |   ",cod3,"   |      %",percent*cod3, "     |")
+print("1° |Eymael                    |   ",cod1,"   |      %",(cod1 / totalVotos) * 100, "     |")
+print("2° |Levy Fidelix              |   ",cod2,"   |      %",(cod2 / totalVotos) * 100, "     |")
+print("3° |Cabo Daciolo              |   ",cod3,"   |      %",(cod3 / totalVotos) * 100, "     |")
 print("   |                          |         |                ", "|")
-print("   |Votos em Nulo ", "           |   ",cod4,"   |      %",percent*cod4, "     |")
-print("   |Votos em Branco ", "         |   ",cod5,"   |      %",percent*cod5, "     |")
+print("   |Votos em Nulo ", "           |   ",cod4,"   |      %",(cod4 / totalVotos) * 100, "     |")
+print("   |Votos em Branco ", "         |   ",cod5,"   |      %",(cod5 / totalVotos) * 100, "     |")
 print("   |Total de Votos ","          |   ",totalVotos,"   |                 |")
 
