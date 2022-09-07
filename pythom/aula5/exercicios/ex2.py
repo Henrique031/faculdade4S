@@ -31,11 +31,12 @@ nota20 = 0
 nota50 = 0
 nota100 = 0 
 nota200 = 0 
-moeda50 = 0 
-moeda10 = 0 
-moeda25 = 0 
-moeda5 = 0
 moeda1 = 0
+moeda50 = 0 
+moeda25 = 0 
+moeda10 = 0 
+moeda5 = 0
+moeda01 = 0
 troco = 0
 
 valorMercadoria = float(input("Digite o valor da mercadoria: "))
@@ -79,6 +80,9 @@ if valorPago > valorMercadoria:
     while troco >= 0.05:
         troco -= 0.05
         moeda5 += 1
+    while troco >= 0.01:
+        troco -= 0.01
+        moeda01 += 1
     print("Valor da mercadoria: R$", valorMercadoria)
     print("Valor pago: R$", valorPago)
     print("Troco: R$", valorPago - valorMercadoria)
@@ -106,6 +110,8 @@ if valorPago > valorMercadoria:
         print(moeda10, " Moeda(s) de R$0,10 Centávos")
     if moeda5 > 0:
         print(moeda5, " Moeda(s) de R$0,05 Centávos")
+    if moeda01 > 0:
+        print(moeda01, " Moeda(s) de R$0,01 Centávos")
 elif valorPago == valorMercadoria:
     print("Valor da mercadoria: R$", valorMercadoria)
     print("Valor pago: R$", valorPago)
