@@ -106,11 +106,11 @@ if valorPago > valorMercadoria:
         print(moeda10, " Moeda(s) de R$0,10 Centávos")
     if moeda5 > 0:
         print(moeda5, " Moeda(s) de R$0,05 Centávos")
-if valorPago == valorMercadoria:
+elif valorPago == valorMercadoria:
     print("Valor da mercadoria: R$", valorMercadoria)
     print("Valor pago: R$", valorPago)
     print("Não existe troco!")
-elif valorMercadoria > valorPago:
+else:
     troco = valorMercadoria - valorPago
     print("Valor da mercadoria: R$", valorMercadoria)
     print("Valor pago: R$", valorPago)
