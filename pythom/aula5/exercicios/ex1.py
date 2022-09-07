@@ -47,9 +47,6 @@ while finalizador == "S":
 
 totalVotos = (cod1 + cod2 + cod3 + cod4 + cod5)
 
-
-
-
 print("       Resultado final das Eleições 2022 1° Turno       ")
 print("   |Candidatos                |  Votos  |   Percentagem   |")
 print("1° |Eymael                    |   ",cod1,"   |      %",(cod1 / totalVotos) * 100, "     |")
