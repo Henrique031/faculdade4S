@@ -14,16 +14,14 @@ Elabore um programa que leia o código de cada voto, calcule e escreva:
 * total e o % de votos em branco;
 Como finalizador da votação, tem-se qualquer valor diferente de "s".
 """
-
-
 print("Escolha um número do seu voto na tabela abaixo")
 print("1 - Eymael\n2 - LevyFidelix\n3 - Cabo Daciolo\n4 - Voto nulo\n5 - Voto em branco")
+
 cod1 = 0 
 cod2 = 0
 cod3 = 0
 cod4 = 0
 cod5 = 0
-
 
 finalizador = "S"
 while finalizador == "S":

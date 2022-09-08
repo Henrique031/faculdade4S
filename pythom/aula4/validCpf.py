@@ -82,7 +82,6 @@ else:
     rai1 = (-b+match.sqrt(delta))/(2*a)
 """
 
-#Meu
 cpf = str(input("Informe seu cpf para a validação: "))
 
 if len(cpf) < 11 or len(cpf) > 11:
