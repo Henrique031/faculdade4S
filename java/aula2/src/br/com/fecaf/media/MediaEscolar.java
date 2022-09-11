@@ -1,10 +1,9 @@
 import java.util.Scanner;
 
 public class MediaEscolar {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         float n1, n2, n3, n4;
         float media;
-
 
         try (Scanner entradaDados = new Scanner(System.in)) {
             System.out.print("Digite a primeira nota: ");
@@ -19,6 +18,6 @@ public class MediaEscolar {
 
         media = (n1 + n2 + n3 + n4) / 4;
 
-        System.out.println("Sua média é: " + media );
+        System.out.println("Sua média é: " + media);
     }
 }
