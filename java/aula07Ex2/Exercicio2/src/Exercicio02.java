@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class Exercicio02 {
     public static void main(String[] args) {
-        int numIni = 0;
-        int numFim = 0;
-        int numPar = 0;
-        int numImpar = 0;
+        int numIni = 2;
+        int numFim = 10;
+        int qtdPar = 0;
+        int qtdImpar = 0;
 
         try (Scanner entradaDados = new Scanner(System.in)) {
 
@@ -23,11 +23,11 @@ public class Exercicio02 {
                 System.out.print("[ERRO], Nenhum dado encontrado por favor, preencha: ");
                 numIni = entradaDados.nextInt();
             }
-            // Entrada Final
-            System.out.print("Digite o número final entre [100 e 1000]: ");
-            numFim = entradaDados.nextInt();
-            // Validação Final
-            while (numFim < numIni) {
+                // Entrada Final
+                System.out.print("Digite o número final entre [100 e 1000]: ");
+                numFim = entradaDados.nextInt();
+                // Validação Final
+                 while (numFim < numIni) {
                 System.out.println("[ERRO], Por favor, digite um núemro maior que " + numIni
                         + " e maior e entre 100 e 1000" + ": ");
                 numFim = entradaDados.nextInt();
@@ -45,32 +45,33 @@ public class Exercicio02 {
                 numFim = entradaDados.nextInt();
             }
         }
-
-        int[] lista = new int[numFim];
-        numFim -= 1;
+        
+        // Laços de repetição
+        int[] lista = new int[numFim - 1];
         for (int i = 0; i < numFim; i++, numIni++) {
             lista[i] = numIni;
         }
-
+        
         System.out.println("");
         System.out.println("Lista de Números Pares\n");
         for (int i = 1; i < lista.length; i++) {
             if (lista[i - 1] % 2 == 0) {
-                numPar += 1;
+                qtdPar += 1;
                 System.out.println(lista[i - 1]);
             }
         }
         System.out.println("");
-        System.out.println("Qtd de números Pares encontrados: " + numPar);
+        System.out.println("Qtd de números Pares encontrados: " + qtdPar);
         System.out.println("");
         System.out.println("Lista de Números Ímpares\n");
         for (int i = 0; i < lista.length; i++) {
             if (lista[i] % 2 != 0) {
-                numImpar += 1;
+                qtdImpar += 1;
                 System.out.println(lista[i]);
             }
         }
         System.out.println("");
-        System.out.println("Qtd de números Ímpares encontrados: " + numImpar);
+        System.out.println("Qtd de números Ímpares encontrados: " + qtdImpar);
     }
 }
+
