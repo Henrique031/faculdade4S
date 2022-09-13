@@ -38,8 +38,7 @@ public class ParImpar {
             while (numFim < numIni || numIni == numFim || numFim < 100 || numFim > 1000 || numFim == 0) {
 
                 while (numFim < numIni) {
-                    System.out.println("[ERRO], Por favor, digite um núemro maior que " + numIni
-                    + " e maior e entre 100 e 1000" + ": ");
+                    System.out.println("[ERRO], Por favor, digite um número entre 100 e 1000: ");
                     numFim = entradaDados.nextInt();
                 }
                 while (numIni == numFim) {
@@ -101,6 +100,7 @@ public class ParImpar {
         System.out.println("Qtd de números Pares encontrados: " + qtdPar);
     }
     public static void NumImpar (int[] lista, int qtdImpar) {
+        System.out.println("");
         System.out.println("Lista de Números Ímpares\n");
         for (int i = lista[0]; i <= lista.length; i++) {
             if (lista[i - lista[0]] % 2 != 0) {
@@ -110,5 +110,6 @@ public class ParImpar {
         }
         System.out.println("");
         System.out.println("Qtd de números Ímpares encontrados: " + qtdImpar);
+        System.out.println("");
     }
 }
