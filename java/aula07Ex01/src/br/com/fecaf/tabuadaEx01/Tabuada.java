@@ -9,74 +9,23 @@ public class Tabuada {
 
         try (Scanner entradaDados = new Scanner(System.in)) {
 
-            System.out.print("Insira a tabuada de inicío: ");
+            System.out.print("Insira a tabuada de inicío entre [2 e 100]: ");
             tabIni = entradaDados.nextInt();
+            ValidacaoIni(tabIni);
 
-            while (tabIni == 0 || (tabIni <= 1 || tabIni >= 101)) {
-
-                while (tabIni == 0) {
-                    System.out.println("Nenhum dado indentificado, digite pelo menos um valor: .");
-                    tabIni = entradaDados.nextInt();
-                }
-                while (tabIni <= 1 || tabIni >= 101) {
-                    System.out.println("Digite um valor entre 2 e 100: ");
-                    tabIni = entradaDados.nextInt();
-                }
-            }
-
-            System.out.print("Insira a tabuada de fim: ");
+            System.out.print("Insira a tabuada de fim entre [" + tabIni + " e 100]: ");
             tabFim = entradaDados.nextInt();
-            while (tabIni == tabFim || tabFim == 0 || (tabFim <= tabIni || tabFim >= 100)) {
+            ValidacaoFim(tabIni, tabFim);
 
-                while (tabIni == tabFim) {
-                    System.out.println("Dados repetidos, digite novamente: ");
-                    tabFim = entradaDados.nextInt();
-                }
-                while (tabFim == 0) {
-                    System.out.println("Nenhum dado encontrado, digite novamente: ");
-                    tabFim = entradaDados.nextInt();
-                }
-                while (tabFim <= tabIni || tabFim >= 100) {
-                    System.out.println("Digite um valor a cima de " + tabIni + " e até 100: ");
-                    tabFim = entradaDados.nextInt();
-                }
-            }
-
-            System.out.print("Insira o inicío do contador: ");
+            System.out.print("Insira o inicío do contador entre [0 e 50]: ");
             cIni = entradaDados.nextInt();
-            while (cIni == cFim || cIni == 0 || (cIni < 0 || cIni >= 51)) {
+            ValidContadorIni(cIni, cFim);
 
-                while (cIni == cFim) {
-                    System.out.println("Valor repetido, digite novamente: ");
-                    cIni = entradaDados.nextInt();
-                }
-                while (cIni == 0) {
-                    System.out.println("Nenhum dado encontrado, digite novamente: ");
-                    cIni = entradaDados.nextInt();
-                }
-                while (cIni < 0 || cIni >= 51) {
-                    System.out.println("Insira um valor entre 0 e 50: ");
-                    cIni = entradaDados.nextInt();
-                }
-            }
 
-            System.out.print("Insira o fim do contador: ");
+            System.out.print("Insira o fim do contador entre [" + cIni + " e 50]: ");
             cFim = entradaDados.nextInt();
-            while (cIni == cFim || cFim == 0 || (cFim < cIni || cFim >= 50)) {
-
-                while (cIni == cFim) {
-                    System.out.println("Valor repetido! \nDigite novamente: ");
-                }
-                while (cFim == 0) {
-                    System.out.println("Nenhum dado encontrado! Digite novamente: ");
-                    cFim = entradaDados.nextInt();
-                }
-                while (cFim < cIni || cFim >= 50) {
-                    System.out.println("Digite um valor a cima de " + cIni + " e até 50: ");
-                    cFim = entradaDados.nextInt();
-                }
-
-            }
+            ValidContadorFim(cIni, cFim);
+           
         }
         while (tabIni <= tabFim) {
             System.out.println("Tabuada do [" + tabIni + "]");
@@ -88,5 +37,80 @@ public class Tabuada {
             tabIni++;
             cIni = 0;
         }
+    }
+
+    public static void ValidacaoIni(int x) {
+        Scanner entradaDados = new Scanner(System.in);
+        while (x == 0 || (x <= 1 || x >= 101)) {
+
+            while (x == 0) {
+                System.out.println("[ERRO] Nenhum dado indentificado, digite pelo menos um valor: .");
+                x = entradaDados.nextInt();
+            }
+            while (x <= 1 || x >= 101) {
+                System.out.println("[ERRO] Digite um valor entre 2 e 100: ");
+                x = entradaDados.nextInt();
+            }
+        }
+
+    }
+
+    public static void ValidacaoFim(int x, int y) {
+        Scanner entradaDados = new Scanner(System.in);
+        while (x == y || y == 0 || (y <= x || y >= 100)) {
+
+            while (x == y) {
+                System.out.println("[ERRO] Dados repetidos, digite novamente: ");
+                y = entradaDados.nextInt();
+            }
+            while (y == 0) {
+                System.out.println("[ERRO] Nenhum dado encontrado, digite novamente: ");
+                y = entradaDados.nextInt();
+            }
+            while (y <= x || y >= 100) {
+                System.out.println("[ERRO] Digite um valor a cima de " + x + " e até 100: ");
+                y = entradaDados.nextInt();
+            }
+        }
+    }
+
+    public static void ValidContadorIni(int cIni, int cFim) {
+        Scanner entradaDados = new Scanner(System.in);
+        while (cIni == cFim || cIni == 0 || (cIni < 0 || cIni >= 51)) {
+            while (cIni == cFim) {
+                System.out.println("[ERRO] Valor repetido, digite novamente: ");
+                cIni = entradaDados.nextInt();
+            }
+            while (cIni == 0) {
+                System.out.println("[ERRO] Nenhum dado encontrado, digite novamente: ");
+                cIni = entradaDados.nextInt();
+            }
+            while (cIni < 0 || cIni >= 51) {
+                System.out.println("[ERRO] Insira um valor entre 0 e 50: ");
+                cIni = entradaDados.nextInt();
+            }
+
+        }
+    }
+
+    public static void ValidContadorFim(int cIni, int cFim) {
+        Scanner entradaDados = new Scanner(System.in);
+        while (cIni == cFim || cFim == 0 || (cFim < cIni || cFim >= 50)) {
+
+            while (cIni == cFim) {
+                System.out.println("[ERRO] Valor repetido! \nDigite novamente: ");
+                cFim = entradaDados.nextInt();
+            }
+            while (cFim == 0) {
+                System.out.println("[ERRO] Nenhum dado encontrado! Digite novamente: ");
+                cFim = entradaDados.nextInt();
+            }
+            while (cFim < cIni || cFim >= 50) {
+                System.out.println("[ERRO] Digite um valor a cima de " + cIni + " e até 50: ");
+                cFim = entradaDados.nextInt();
+            }
+
+        }
+
     }
 }
