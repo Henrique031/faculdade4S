@@ -63,17 +63,44 @@ public class ParImpar {
         for (int i = 1; i < numFim; i++, numIni++)
         lista[i - 1] = numIni;
         
-        System.out.println("");
+        NumPar(lista, qtdPar);
+        NumImpar(lista, qtdImpar);
+      /*   System.out.println("");
         System.out.println("Lista de Números Pares\n");
         for (int i = lista[0]; i <= lista.length; i++) {
             if (lista[i - lista[0]] % 2 == 0) {
                 qtdPar += 1;
                 System.out.println(lista[i - lista[0]]);
             }
-        }
+        } 
         System.out.println("");
         System.out.println("Qtd de números Pares encontrados: " + qtdPar);
         System.out.println("");
+        */
+        /* System.out.println("Lista de Números Ímpares\n");
+        for (int i = lista[0]; i <= lista.length; i++) {
+            if (lista[i - lista[0]] % 2 != 0) {
+                qtdImpar += 1;
+                System.out.println(lista[i - lista[0]]);
+            }
+        }
+        System.out.println("");
+        System.out.println("Qtd de números Ímpares encontrados: " + qtdImpar); */
+    }
+    public static void NumPar(int[] lista, int qtdPar) {
+        System.out.println("");
+        System.out.println("Lista de Números Pares\n");
+        for (int i = lista[0]; i <= lista.length; i++) {
+            if (lista[i - lista[0]] % 2 == 0) {
+                qtdPar += 1;
+                
+                System.out.println(lista[i - lista[0]]);
+            }
+        }
+        System.out.println("");
+        System.out.println("Qtd de números Pares encontrados: " + qtdPar);
+    }
+    public static void NumImpar (int[] lista, int qtdImpar) {
         System.out.println("Lista de Números Ímpares\n");
         for (int i = lista[0]; i <= lista.length; i++) {
             if (lista[i - lista[0]] % 2 != 0) {
