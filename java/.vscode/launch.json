@@ -1,0 +1,77 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "java_85b94117"
+        },
+        {
+            "type": "java",
+            "name": "Launch MediaEscolar",
+            "request": "launch",
+            "mainClass": "aula002.src.br.com.fecaf.mediaEscolar.MediaEscolar",
+            "projectName": "java_85b94117"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tabuada",
+            "request": "launch",
+            "mainClass": "aula006.src.br.com.fecaf.tabuada.Tabuada",
+            "projectName": "java_85b94117"
+        },
+        {
+            "type": "java",
+            "name": "Launch OlaMundo",
+            "request": "launch",
+            "mainClass": "aula01.src.br.com.fecaf.olamundo.OlaMundo",
+            "projectName": "java_85b94117"
+        },
+        {
+            "type": "java",
+            "name": "Launch CalculadoraV1",
+            "request": "launch",
+            "mainClass": "aula03.src.br.com.fecaf.calculadoraV1.CalculadoraV1",
+            "projectName": "java_85b94117"
+        },
+        {
+            "type": "java",
+            "name": "Launch CalculadoraV2",
+            "request": "launch",
+            "mainClass": "aula04.src.br.com.fecaf.calculadoraV2.CalculadoraV2",
+            "projectName": "java_85b94117"
+        },
+        {
+            "type": "java",
+            "name": "Launch ParImpar",
+            "request": "launch",
+            "mainClass": "aula07Ex01.src.br.com.fecaf.parImparEx02.ParImpar",
+            "projectName": "java_85b94117"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tabuada(1)",
+            "request": "launch",
+            "mainClass": "aula07Ex01.src.br.com.fecaf.tabuadaEx01.Tabuada",
+            "projectName": "java_85b94117"
+        },
+        {
+            "type": "java",
+            "name": "Launch MediaEscolar$MediaEscolarEx",
+            "request": "launch",
+            "mainClass": "br.com.fecaf.exMediaEscolar.MediaEscolar$MediaEscolarEx",
+            "projectName": "java_85b94117"
+        }
+    ]
+}
