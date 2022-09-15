@@ -8,6 +8,7 @@ public class ParImpar {
         int numFim = 0;
         int qtdPar = 0;
         int qtdImpar = 0;
+        String escolha = "1";
         
         System.out.println("Programa do Par e do Ímpar");
 
@@ -54,6 +55,9 @@ public class ParImpar {
                     numFim = entradaDados.nextInt();
                 }
             }
+            System.out.println(" 1 - Par\n 2 - Ímpar\n 3 - Ambos");
+            System.out.print("Digite o código do seu interece: ");
+            escolha = entradaDados.next();
 
         }
 
@@ -62,8 +66,21 @@ public class ParImpar {
         for (int i = 1; i < numFim; i++, numIni++)
         lista[i - 1] = numIni;
         
-        NumPar(lista, qtdPar);
-        NumImpar(lista, qtdImpar);
+        switch (escolha) {
+            case "1":
+            NumPar(lista, qtdPar);
+            break;
+            case "2":
+            NumImpar(lista, qtdImpar);
+            break;
+            case "3":
+            NumPar(lista, qtdPar);
+            NumImpar(lista, qtdImpar);
+            break;
+            default:
+            System.out.println("[ERRO] ecolha do [1 ao 3]");
+                break;
+        }
       /*   System.out.println("");
         System.out.println("Lista de Números Pares\n");
         for (int i = lista[0]; i <= lista.length; i++) {
