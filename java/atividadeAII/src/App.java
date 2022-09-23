@@ -7,7 +7,8 @@ public class App {
         int qtdeAnosEmpresa;
         double reajuste = 0, salFunc = 0;
 
-        DecimalFormat DF = new DecimalFormat();
+        DecimalFormat DF = new DecimalFormat("#.0");
+
 
         try (Scanner in = new Scanner(System.in)) {
             System.out.print("Digite o nome do funcionário: ");
@@ -35,6 +36,7 @@ public class App {
         }
         System.out.println("");
         System.out.println("O reajuste foi de: " + nomeR);
-        System.out.println("Novo salário é: " + reajuste);
+        System.out.println("Novo salário é: " + DF.format(reajuste) );
+
     }
 }
