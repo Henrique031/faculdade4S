@@ -9,6 +9,7 @@ public class ParImpar {
         int qtdPar = 0;
         int qtdImpar = 0;
         String escolha = "1";
+    
         
         System.out.println("Programa do Par e do Ímpar");
 
