@@ -2,18 +2,18 @@ package br.com.fecaf.produto;
 
 public class Produto {
     
-    public int id;
-    public String nome;
-    public String descricao;
-    public int qtdeEstoque;
-    public double valorCompra;
-    public double valorVenda;
-    public String statusProduto;
+    private int id;
+    private String nome;
+    private String descricao;
+    private int qtdeEstoque;
+    private double valorCompra;
+    private double valorVenda;
+    private String statusProduto;
 
 
     public void listagemProduto() {
         System.out.println("Id do produto: " + this.id);
-        System.out.println("Nome: " + this.nome);
+        System.out.println("Nome: " + getNome());
         System.out.println("Descrição: " + this.descricao);
         System.out.println("Quantidade de Estoque: " + this.qtdeEstoque);
         System.out.println("Valor da Compra: " + this.valorCompra);
@@ -23,19 +23,32 @@ public class Produto {
     }
 
     public void calcularValorVenda (double porcental) {
-        double reajuste;
-        reajuste = (((porcental / 100) + 1) * this.valorCompra);
-        System.out.println("Reajuste é de: " + reajuste);
+        double valorVenda = 0;
+        valorVenda = this.valorCompra+((this.valorCompra*porcental))/100;
+        this.valorVenda = valorVenda;
     }
     
     public void validarEstoque () {
         // System.out.println(qtdeEstoque <= 8 ? "Nível crítico" : "");
         if (this.qtdeEstoque <= 8)
-            System.out.println("Nível crítico");
-        else if( this.qtdeEstoque <= 12)
-            System.out.println("Nível baixo");
-        else if (this.qtdeEstoque > 12)
-            System.out.println("Nível Normal");
+            this.statusProduto = "Nível crítico";
+            else if( this.qtdeEstoque <= 12)
+            this.statusProduto = "Nível baixo";
+            else if (this.qtdeEstoque > 12)
+            this.statusProduto = "Nível normal";
+    }
+
+    //set - significa guardar
+    //get - significa pegar
+
+    //get Nome
+    public void setNome (String nome) {
+        this.nome = nome.toUpperCase();
+    }
+
+    // get Nome
+    public String getNome() {
+        return this.nome;
     }
 
 }

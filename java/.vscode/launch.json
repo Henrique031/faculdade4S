@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch CalculadoraV2",
+            "request": "launch",
+            "mainClass": "br.com.fecaf.calculadoraV2.CalculadoraV2",
+            "projectName": "java_85b94117"
+        },
+        {
+            "type": "java",
+            "name": "Launch Principal",
+            "request": "launch",
+            "mainClass": "Principal",
+            "projectName": "java_85b94117"
+        },
+        {
+            "type": "java",
+            "name": "Launch Principal",
+            "request": "launch",
+            "mainClass": "br.com.fecaf.produto.Principal",
+            "projectName": "java_85b94117"
+        },
+        {
+            "type": "java",
+            "name": "Launch Principal",
+            "request": "launch",
+            "mainClass": "aula10.src.br.com.fecaf.produto.Principal",
+            "projectName": "java_85b94117"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
