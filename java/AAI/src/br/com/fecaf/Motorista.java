@@ -1,11 +1,19 @@
 package br.com.fecaf;
 
-public class Motorista {
+import java.util.Scanner;
 
-    private int numCNH;
+public class Motorista extends Funcionarios {
+
+    Scanner in = new Scanner(System.in);
+
     private String categoria;
-    private String primHabit;
+    private String dataPrimHabit;
     private String dataValid;
+    private int numCNH;
+
+    public Motorista() {
+
+    }
 
     public int getNumCNH() {
         return numCNH;
@@ -23,12 +31,12 @@ public class Motorista {
         this.categoria = categoria;
     }
 
-    public String getprimHabit() {
-        return primHabit;
+    public String getDataPrimHabit() {
+        return dataPrimHabit;
     }
 
-    public void setprimHabit(String primHabit) {
-        this.primHabit = primHabit;
+    public void setDataPrimHabit(String dataPrimHabit) {
+        this.dataPrimHabit = dataPrimHabit;
     }
 
     public String getDataValid() {
@@ -37,6 +45,25 @@ public class Motorista {
 
     public void setDataVaid(String dataValid) {
         this.dataValid = dataValid;
+    }
+
+    public void setDadosMotorista () {
+        
+        setDadosFuncionario();
+        
+        System.out.print("Categoria: [Moto, Carro, Van ou Caminhão]");
+        this.setCategoria(in.next());
+        System.out.print("Data da Primeira Habilitação: ");
+        this.setDataPrimHabit(in.next());
+        System.out.print("Data de Validade da Habilitação: ");
+        this.setDataVaid(in.next());
+        System.out.print("Número CNH: ");
+        this.setNumCNH(in.nextInt());
+        
+    }
+
+    public void getDadosMotorista () {
+        
     }
 
 }

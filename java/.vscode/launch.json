@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Principal",
+            "request": "launch",
+            "mainClass": "br.com.fecaf.Principal",
+            "projectName": "java_85b94117"
+        },
+        {
+            "type": "java",
+            "name": "Launch Principal",
+            "request": "launch",
+            "mainClass": "br.com.fecaf.encapsulamento.Principal",
+            "projectName": "java_85b94117"
+        },
+        {
+            "type": "java",
             "name": "Launch CalculadoraV2",
             "request": "launch",
             "mainClass": "br.com.fecaf.calculadoraV2.CalculadoraV2",

@@ -1,16 +1,46 @@
 package br.com.fecaf;
 
+import java.util.Scanner;
+
 public class Funcionarios {
 
+    Scanner in = new Scanner(System.in);
+
     private String nome;
-    private int matricula;
     private String dataNasc;
     private String telFixo;
     private String cel;
-    private float valorHora;
     private String email;
     private String dataAdmiss;
     private String dataDemiss;
+    private String cargo;
+    private float valorHora;
+    private int matricula;
+
+    public Funcionarios() {
+
+    }
+
+    public Funcionarios(String cargo) { // construtor Funcionarios
+        if (cargo.toUpperCase().equals("S"))
+            this.cargo = "Secretaria";
+        else if (cargo.toUpperCase().equals("M"))
+            this.cargo = "Motorista";
+        else if (cargo.toUpperCase().equals("F"))
+            this.cargo = "Funcionario";
+        else {
+            System.out.println("Nenhum Codigo Encontrado");
+            System.exit(-1);
+        }
+    }
+
+    public String getCargo() {
+        return this.cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
 
     public String getNome() {
         return nome;
@@ -32,7 +62,7 @@ public class Funcionarios {
         return dataNasc;
     }
 
-    public void setdataNasc(String dataNasc) {
+    public void setDataNasc(String dataNasc) {
         this.dataNasc = dataNasc;
     }
 
@@ -82,6 +112,30 @@ public class Funcionarios {
 
     public void setDataDemiss(String dataDemiss) {
         this.dataDemiss = dataDemiss;
+    }
+
+    public void setDadosFuncionario () {
+        System.out.print("Nome: ");
+        this.setNome(in.next());
+        System.out.print("Data de Nascimento: ");
+        this.setDataNasc(in.next());
+        System.out.print("Telefone: ");
+        this.setTelFixo(in.next());
+        System.out.print("Celular: ");
+        this.setCel(in.next());
+        System.out.print("E-mail: ");
+        this.setEmail(in.next());
+        System.out.print("Data de Admissão: ");
+        this.setDataAdmiss(in.next());
+        System.out.print("Data de Demissão: ");
+        this.setDataDemiss(in.next());
+        System.out.print("Valor Hora: ");
+        this.setValorHora(in.nextFloat());
+        System.out.print("Número de Matricula: ");
+        this.setMatricula(in.nextInt());
+
+
+
     }
 
 }

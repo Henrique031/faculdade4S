@@ -5,6 +5,7 @@ import java.time.LocalDate;
 public class Aluno {
     // Atributos da classe (sempre para ser acessado precisa do this)
     private int id;
+    private int idade;
     private String ra;
     private String nome;
     private String sobreNome;
@@ -12,7 +13,6 @@ public class Aluno {
     private String sexo;
     private String descricaoSexo;
     private String dataNascimento;
-    private int idade;
     private String tipoCurso;
 
     // Construtor

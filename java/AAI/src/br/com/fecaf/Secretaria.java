@@ -1,10 +1,18 @@
 package br.com.fecaf;
 
-public class Secretaria {
+import java.util.Scanner;
 
-    private int qntdIdioma;
+public class Secretaria extends Funcionarios {
+
+    Scanner in = new Scanner(System.in);
+
     private String nomeGrad;
     private String anoIniGrad;
+    private int qntdIdioma;
+
+    public Secretaria() {
+
+    }
 
     public int getQntdIdioma() {
         return qntdIdioma;
@@ -28,6 +36,23 @@ public class Secretaria {
 
     public void setAnoIniGrad(String anoIniGrad) {
         this.anoIniGrad = anoIniGrad;
+    }
+
+    public void setDadosSecretaria () {
+        
+        setDadosFuncionario();
+        
+        System.out.print("Nome da Graduação: ");
+        this.setNomeGrad(in.next());
+        System.out.print("Ano de Início da Graduação: ");
+        this.setAnoIniGrad(in.next());
+        System.out.print("Quantidade de Idiomas: ");
+        this.setQntdIdioma(in.nextInt()); 
+        
+    }
+
+    public void getDadosSecretaria () {
+        
     }
 
 }
