@@ -116,23 +116,31 @@ public class Funcionarios {
 
     public void setDadosFuncionario () {
         System.out.print("Nome: ");
-        this.setNome(in.next());
+        this.setNome("Henrique");
+        // this.setNome(in.next());
         System.out.print("Data de Nascimento: ");
-        this.setDataNasc(in.next());
+        this.setDataNasc("31/01/2001");
+        // this.setDataNasc(in.next());
         System.out.print("Telefone: ");
-        this.setTelFixo(in.next());
+        this.setCel("4138-5242");
+        // this.setTelFixo(in.next());
         System.out.print("Celular: ");
-        this.setCel(in.next());
+        this.setTelFixo("1198498-5242");
+        // this.setCel(in.next());
         System.out.print("E-mail: ");
-        this.setEmail(in.next());
+        this.setEmail("rique.31galdino@hotmail.com");
+        // this.setEmail(in.next());
         System.out.print("Data de Admissão: ");
-        this.setDataAdmiss(in.next());
+        this.setDataAdmiss("01/05/2010");
+        // this.setDataAdmiss(in.next());
         System.out.print("Data de Demissão: ");
-        this.setDataDemiss(in.next());
-        System.out.print("Valor Hora: ");
+        this.setDataDemiss("10/05/2020");
+        // this.setDataDemiss(in.next());
+        System.out.print("Horas Trabalhadas este Mês: ");
         this.setValorHora(in.nextFloat());
         System.out.print("Número de Matricula: ");
-        this.setMatricula(in.nextInt());
+        this.setMatricula(30225);
+        // this.setMatricula(in.nextInt());
 
 
 

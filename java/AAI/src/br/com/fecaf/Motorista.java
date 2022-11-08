@@ -9,6 +9,7 @@ public class Motorista extends Funcionarios {
     private String categoria;
     private String dataPrimHabit;
     private String dataValid;
+    private float sal;
     private int numCNH;
 
     public Motorista() {
@@ -47,18 +48,35 @@ public class Motorista extends Funcionarios {
         this.dataValid = dataValid;
     }
 
+    public float getSal() {
+        return sal;
+    }
+
+    public void setSal (int sal) {
+        this.sal = sal;
+    }
+
+
     public void setDadosMotorista () {
         
         setDadosFuncionario();
         
-        System.out.print("Categoria: [Moto, Carro, Van ou Caminhão]");
+        System.out.print("Categorias: \n   [C] => Carro\n   [M] => Moto\n   [V] => Van\n   [CM] => Caminhão\n");
+        System.out.print("Código: ");
         this.setCategoria(in.next());
         System.out.print("Data da Primeira Habilitação: ");
-        this.setDataPrimHabit(in.next());
+        this.setDataPrimHabit("03/05/1990");
+        // this.setDataPrimHabit(in.next());
         System.out.print("Data de Validade da Habilitação: ");
-        this.setDataVaid(in.next());
+        this.setDataVaid("01/01/2023");
+        // this.setDataVaid(in.next());
         System.out.print("Número CNH: ");
-        this.setNumCNH(in.nextInt());
+        this.setNumCNH(123);
+        // this.setNumCNH(in.nextInt());
+        System.out.print("Salario: ");
+        this.setSal(in.nextInt());
+
+        //media de hrsTBLDs são 220hrs
         
     }
 

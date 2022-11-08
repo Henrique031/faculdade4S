@@ -25,10 +25,45 @@ public class Principal {
 
             Motorista motor = new Motorista();
             if(func.getCargo().equals("Motorista")){
+
+                float salTotal = 0;
+
                 motor.setDadosMotorista();
+
+                float hrsTBLsMes = motor.getValorHora();
+                // System.out.println(hrsTBLsMes);
+                float sal = motor.getSal();
+                // System.out.println(sal);
+
+                if (motor.getCategoria().toUpperCase().equals("M")){
+                    System.out.println("Moto");
+                    salTotal += 1;
+                }
+                else if (motor.getCategoria().toUpperCase().equals("C")) {
+                    System.out.println("Carro");
+                    salTotal += 2;
+                }
+                else if (motor.getCategoria().toUpperCase().equals("V")) {
+                    System.out.println("Van");
+                    salTotal += 3;
+                }
+                else if (motor.getCategoria().toUpperCase().equals("CM")) {
+                    System.out.println("Caminhão");
+                    salTotal += 4;
+                }
+                else {
+                    System.out.println("Nenhuma COD encontrado");
+                    System.exit(-1);
+                }
+
+                //2,00 por hrsTBLDsMes mais o salario
+                salTotal = hrsTBLsMes * 2 + sal;
+
+                System.out.println(salTotal);
+
             }
-            
-            
         }
     }
+
+
 }
