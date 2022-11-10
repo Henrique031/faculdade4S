@@ -16,6 +16,7 @@ public class Funcionarios {
     private String cargo;
     private float valorHora;
     private int matricula;
+    private int hrsTBLsMes;
 
     public Funcionarios() {
 
@@ -114,36 +115,73 @@ public class Funcionarios {
         this.dataDemiss = dataDemiss;
     }
 
+
+    public int getHrsTBLsMes() {
+        return hrsTBLsMes;
+    }
+
+    public void setHrsTBLsMes(int hrsTBLsMes) {
+        this.hrsTBLsMes = hrsTBLsMes;
+    }
+
     public void setDadosFuncionario () {
+
         System.out.print("Nome: ");
-        this.setNome("Henrique");
-        // this.setNome(in.next());
+        this.setNome(in.next());
+        // this.setNome("Henrique");
+
         System.out.print("Data de Nascimento: ");
-        this.setDataNasc("31/01/2001");
-        // this.setDataNasc(in.next());
+        this.setDataNasc(in.next());
+        // this.setDataNasc("31/01/2001");
+
         System.out.print("Telefone: ");
-        this.setCel("4138-5242");
-        // this.setTelFixo(in.next());
+        this.setTelFixo(in.nextLine());
+        // this.setCel("4138-5242");
+
         System.out.print("Celular: ");
-        this.setTelFixo("1198498-5242");
-        // this.setCel(in.next());
+        this.setCel(in.nextLine());
+        // this.setTelFixo("1198498-5242");
+
         System.out.print("E-mail: ");
-        this.setEmail("rique.31galdino@hotmail.com");
-        // this.setEmail(in.next());
+        this.setEmail(in.nextLine());
+        // this.setEmail("rique.31galdino@hotmail.com");
+
         System.out.print("Data de Admissão: ");
-        this.setDataAdmiss("01/05/2010");
-        // this.setDataAdmiss(in.next());
+        this.setDataAdmiss(in.nextLine());
+        // this.setDataAdmiss("01/05/2010");
+
         System.out.print("Data de Demissão: ");
-        this.setDataDemiss("10/05/2020");
-        // this.setDataDemiss(in.next());
-        System.out.print("Horas Trabalhadas este Mês: ");
+        this.setDataDemiss(in.nextLine());
+        // this.setDataDemiss("10/05/2020");
+
+        System.out.print("Valor hora: "); //220
         this.setValorHora(in.nextFloat());
+
         System.out.print("Número de Matricula: ");
-        this.setMatricula(30225);
-        // this.setMatricula(in.nextInt());
+        this.setMatricula(in.nextInt());
+        // this.setMatricula(30225);
 
+        System.out.print("Horas trabalhas no mês: ");
+        this.setHrsTBLsMes(in.nextInt());
 
+    }
 
+    public void getDadosFunc () {
+
+        System.out.println("");
+        System.out.println(" ############ Funcionario ############# ");
+        System.out.println("");
+        System.out.println("Nome: " + this.getNome());
+        System.out.println("Data de Nascimento: " + this.getDataNasc());
+        System.out.println("Telefone: " + this.getTelFixo());
+        System.out.println("Celular: " + this.getCel());
+        System.out.println("Email: " + this.getEmail());
+        System.out.println("Data de Admissão: " + this.getDataAdmiss());
+        System.out.println("Data de Demissão: " + this.getDataDemiss());
+        System.out.println("Valor da hora: " + this.getValorHora());
+        System.out.println("Número da Matricula: " + this.getMatricula());
+        System.out.println("Horas Trabalhadas no mês: " + this.getHrsTBLsMes());
+        
     }
 
 }
