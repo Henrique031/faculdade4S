@@ -144,7 +144,6 @@ public class Funcionarios {
 
         System.out.print("E-mail: ");
         this.setEmail(in.nextLine());
-        // this.setEmail("rique.31galdino@hotmail.com");
 
         System.out.print("Data de Admissão: ");
         this.setDataAdmiss(in.nextLine());

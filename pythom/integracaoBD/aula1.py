@@ -47,7 +47,7 @@ cmd = 'SELECT departamento_id FROM departementos where departamento_id ='+depto_
 
 cursor.execute(cmd)
 
-resultado = cursor.fetchall()
+resultado = cursor.fetchall() # Método fetchall(): retorna todas as linhas obtidas pela consulta na tabela
 if len(resultado) == 0:
     print('Inclusão de Departamento:')
     depto_nome = input("Entre com o nome do Departamento: ")
